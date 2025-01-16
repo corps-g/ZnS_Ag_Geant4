@@ -1,0 +1,67 @@
+# Sample PBS job script
+# 
+# Submit job with qsub thisScript.sh
+# 
+# Line start with # is comment. Start with #PBS is directive.
+#
+# Inherit all environment variables
+#PBS -V 
+
+### Run in the queue named "batch"
+#   #PBS -q batch
+
+### Use the bourne shell
+#PBS -S /bin/sh
+
+### Remove only the three initial "#" characters before #PBS
+### in the following lines to enable:
+###
+### To send email when the job is completed:
+#PBS -m ae
+##PBS -M kevin.fuwenkai@gmail.com
+
+### Specify the number of cpus for your job.
+#PBS -l nodes=1:ppn=32
+
+
+# #PBS -l nodes=8 -l procs=200
+# #PBS -l procs=200
+
+### Tell PBS how much memory you expect to use PER core. 
+#   Use units of 'b','kb', 'mb' or 'gb'.
+# #PBS -l mem=1gb
+
+### Tell PBS the anticipated run-time for your job, where walltime=HH:MM:SS
+#PBS -l walltime=120:00:00
+
+### Switch to the working directory; by default TORQUE launches processes
+### from your home directory.
+cd $PBS_O_WORKDIR
+
+### Optionally set the destination for your program's output
+### Specify localhost and an NFS filesystem to prevent file copy errors.
+#PBS -e ./myjob.err
+#PBS -o ./myjob.log
+
+# Calculate the number of processors allocated to this run.
+# NPROCS=`wc -l $PBS_NODEFILE`
+# echo $NPROCS
+# Calculate the number of nodes allocated.
+# NNODES=`uniq -u $PBS_NODEFILE | wc -l`
+# echo $NNODES
+# cp $PBS_NODEFILE ./nodefile.txt
+
+### Set the job name
+# #PBS -N myjob
+
+### mpirun example, NEED to specify pathes of mpirun and python2.7
+# /opt/openmpi/bin/mpirun -np 100 /opt/python/bin/python2.7 mpi.py
+
+# Instead of direct using python, use /opt/python/bin/python2.7, examples are 
+# /opt/python/bin/python2.7 --version
+# /opt/python/bin/python2.7 script.py
+
+
+
+
+/home/wenkaifu/geant4/neighbor_check_immersion/weight_ratio/build/exampleB1 run.mac 5.000000 0.130000 > out.txt

@@ -1,0 +1,142 @@
+# Set some default verbose
+/control/verbose 2
+/control/saveHistory
+/run/verbose 2
+
+# Initialize kernel
+/run/initialize
+
+
+# -----------------------------------------------------------------------------
+# visualize setting
+# -----------------------------------------------------------------------------
+
+# Use these open statements to open selected visualization
+#
+# Use this open statement to create an OpenGL view:
+/vis/open OGL
+#
+# Use this open statement to create an OpenInventor view:
+#/vis/open OI
+#
+# Use this open statement to create a .prim file suitable for
+# viewing in DAWN:
+#/vis/open DAWNFILE
+#
+# Use this open statement to create a .heprep file suitable for
+# viewing in HepRApp:
+#/vis/open HepRepFile
+#
+# Use this open statement to create a .wrl file suitable for
+# viewing in a VRML viewer:
+#/vis/open VRML2FILE
+#
+# Disable auto refresh and quieten vis messages whilst scene and
+# trajectories are established:
+/vis/viewer/set/autoRefresh true
+/vis/verbose errors
+
+# Draw geometry:
+/vis/drawVolume
+
+# source particle visualization
+/vis/scene/add/trajectories
+/vis/scene/endOfEventAction accumulate 1000
+
+# customize the GUI
+/vis/viewer/set/style s
+
+# color
+/vis/geometry/set/colour World 0 0 0 1 0.1
+/vis/geometry/set/colour pmmaLV1 0 0 1 0
+/vis/geometry/set/colour pmmaLV2 0 0 1 0
+/vis/geometry/set/colour ZnS(AG)LV 0 1 0 0
+/vis/geometry/set/colour scinLV 0 1 1 0 0.2
+
+# visibility
+/vis/geometry/set/visibility pmtLV 0 0
+/vis/geometry/set/visibility srcLV 0 0
+
+/vis/viewer/set/viewpointVector -1 0 0
+
+# ------------------------------------------------------------------------------
+# Useful commands
+
+# geometry visibility
+# /vis/geometry/set/visibility logical_volume_name depth visibility
+
+# geometry color
+# /vis/geometry/set/colour lv_name depth red green blue (opacity)
+
+# list all logical volumes
+# /vis/geometry/list
+
+# view angle
+# /vis/viewer/set/viewpointThetaPhi 70 20
+# /vis/viewer/set/viewpointVector [x] [y] [z]
+
+# set upVector
+# /vis/viewer/set/upVector [x] [y] [z]
+
+# drawing style
+# /vis/viewer/set/style w or s
+# w: wireframe
+# s: surface
+
+# pan to specific coordinate
+# /vis/viewer/panTo [right] [up] [unit]
+# /vis/viewer/pan [right] [up] [unit]
+
+# zoom 
+# /vis/viewer/zoomTo 4.
+# /vis/viewer/zoom [multiplier]
+
+# save figure
+/vis/ogl/set/printMode pixmap
+/vis/ogl/set/printSize -1 -1
+
+# /vis/ogl/export name
+# /vis/ogl/printEPS
+
+# Eps file can be converted to pdf by Linux command
+# epstopdf input.eps
+
+# add axes to draw
+# /vis/scene/add/axes [x0] [y0] [z0] [length] [unit] [colour-string] [showtext]
+
+# Draws axes at (x0, y0, z0) of given length and colour
+# If "colour-string" is "auto", x, y and z will be red, green and blue 
+# respectively. Otherwise it can be one of the pre-defined text-specified 
+# colours - see information printed by the vis manager at start-up or use "/vis/list".
+# If "length" is negative, it is set to about 25% of scene extent.
+# If "showtext" is false, annotations are suppressed.
+
+# To delete the axes, just run
+#   /vis/drawVolume
+
+# set background color
+# /vis/viewer/set/background [red_or_string] [green] [blue] [opacity]
+
+# Use ! to skip parameter setting?
+
+# set light direction
+# /vis/viewer/set/lightsVector  [x] [y] [z]
+# usually set this to viewpointVector to avoid shadow
+
+# Or set Lights move with camera or with object
+# /vis/viewer/set/lightsMove [lightsMove]
+# Parameter candidates : cam camera with-camera obj object with-object
+
+
+# reset to the default
+# /vis/viewer/reset
+
+# source particle visualization
+# /vis/scene/add/trajectories
+
+# /vis/scene/endOfEventAction [action] [maxNumber]
+# Accumulate or refresh the viewer for each new event.
+# "accumulate": viewer accumulates hits, etc., event by event, or
+# "refresh": viewer shows them at end of event or, for direct-screen viewers, 
+# refreshes the screen just before drawing the next event.
+

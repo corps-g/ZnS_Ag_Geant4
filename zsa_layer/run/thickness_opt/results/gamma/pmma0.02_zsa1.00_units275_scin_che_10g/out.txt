@@ -1,0 +1,1750 @@
+
+*************************************************************
+ Geant4 version Name: geant4-10-02-patch-02 [MT]   (17-June-2016)
+  << in Multi-threaded mode >> 
+                      Copyright : Geant4 Collaboration
+                      Reference : NIM A 506 (2003), 250-303
+                            WWW : http://cern.ch/geant4
+*************************************************************
+
+lenpmma = 0.018016 cm, lenZSA = 1 um, number of units = 275
+<<< Geant4 Physics List simulation engine: QGSP_BERT_HP 3.0
+
+
+RegisterPhysics: G4EmStandard
+RegisterPhysics: G4GammaLeptoNuclearPhys
+RegisterPhysics: Decay
+RegisterPhysics: hElasticWEL_CHIPS_HP
+RegisterPhysics: hInelastic QGSP_BERT_HP
+RegisterPhysics: stopping
+RegisterPhysics: ionInelasticFTFP_BIC
+Visualization Manager instantiating with verbosity "warnings (3)"...
+Visualization Manager initialising...
+Registering graphics systems...
+
+You have successfully registered the following graphics systems.
+Current available graphics systems are:
+ASCIITree (ATree)
+DAWNFILE (DAWNFILE)
+G4HepRep (HepRepXML)
+G4HepRepFile (HepRepFile)
+RayTracer (RayTracer)
+VRML1FILE (VRML1FILE)
+VRML2FILE (VRML2FILE)
+gMocrenFile (gMocrenFile)
+
+Registering model factories...
+
+You have successfully registered the following model factories.
+Registered model factories:
+  generic
+  drawByCharge
+  drawByParticleID
+  drawByOriginVolume
+  drawByAttribute
+
+Registered filter factories:
+  chargeFilter
+  particleFilter
+  originVolumeFilter
+  attributeFilter
+
+You have successfully registered the following user vis actions.
+Run Duration User Vis Actions: none
+End of Event User Vis Actions: none
+End of Run User Vis Actions: none
+
+Some /vis commands (optionally) take a string to specify colour.
+Available colours:
+  black, blue, brown, cyan, gray, green, grey, magenta, red, white, yellow
+
+### NIST DataBase for Materials is used
+G4NistMaterialBuilder::FindOrBuildMaterial G4_AIR
+G4NistMaterialBuilder: BuildMaterial #103
+New material nComponents= 4
+G4NistElementBuilder: Build Element <C>  Z= 6  Aeff= 12.0107  with natural isotope composition
+G4NistElementBuilder: Build Element <N>  Z= 7  Aeff= 14.0068  with natural isotope composition
+G4NistElementBuilder: Build Element <O>  Z= 8  Aeff= 15.9994  with natural isotope composition
+G4NistElementBuilder: Build Element <Ar>  Z= 18  Aeff= 39.9477  with natural isotope composition
+G4Material: Mean excitation energy is changed for G4_AIR Iold= 85.6689eV; Inew= 85.7 eV;
+G4NistMaterialBuilder::FindOrBuildMaterial G4_PLEXIGLASS
+G4NistMaterialBuilder: BuildMaterial #221
+New material nComponents= 3
+G4NistElementBuilder: Build Element <H>  Z= 1  Aeff= 1.00794  with natural isotope composition
+G4Material: Mean excitation energy is changed for G4_PLEXIGLASS Iold= 68.6089eV; Inew= 74 eV;
+G4NistMaterialBuilder::FindOrBuildMaterial G4_POLYSTYRENE
+G4NistMaterialBuilder: BuildMaterial #224
+New material nComponents= 2
+G4Material: Mean excitation energy is changed for G4_POLYSTYRENE Iold= 65.9437eV; Inew= 68.7 eV;
+G4NistElementBuilder: Build Element <Zn>  Z= 30  Aeff= 65.3955  with natural isotope composition
+G4NistElementBuilder: Build Element <S>  Z= 16  Aeff= 32.0661  with natural isotope composition
+G4NistElementBuilder: Build Element <Ag>  Z= 47  Aeff= 107.868  with natural isotope composition
+G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+New sensitive detector <ZnSAg> is registered at /
+/homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+@@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+@@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+NeutronHP: /Capture file for Z = 6, A = 12 is not found and NeutronHP will use /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Capture/CrossSection/6_nat_Carbon
+NeutronHP: /Elastic file for Z = 6, A = 12 is not found and NeutronHP will use /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Elastic/CrossSection/6_nat_Carbon
+NeutronHP: /Inelastic file for Z = 6, A = 12 is not found and NeutronHP will use /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic/CrossSection/6_nat_Carbon
+NeutronHP: /Capture file for Z = 6, A = 13 is not found and NeutronHP will use /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Capture/CrossSection/6_nat_Carbon
+NeutronHP: /Elastic file for Z = 6, A = 13 is not found and NeutronHP will use /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Elastic/CrossSection/6_nat_Carbon
+NeutronHP: /Inelastic file for Z = 6, A = 13 is not found and NeutronHP will use /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic/CrossSection/6_nat_Carbon
+NeutronHP: /Capture file for Z = 8, A = 18 is not found and NeutronHP will use /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Capture/CrossSection/8_17_Oxygen
+NeutronHP: /Elastic file for Z = 8, A = 18 is not found and NeutronHP will use /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Elastic/CrossSection/8_17_Oxygen
+NeutronHP: /Inelastic file for Z = 8, A = 18 is not found and NeutronHP will use /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic/CrossSection/8_17_Oxygen
+
+phot:   for  gamma    SubType= 12  BuildTable= 0
+      LambdaPrime table from 200 keV to 10 TeV in 54 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       PhotoElectric :  Emin=        0 eV    Emax=       10 TeV   AngularGenSauterGavrila  FluoActive
+
+compt:   for  gamma    SubType= 13  BuildTable= 1
+      Lambda table from 100 eV  to 1 MeV, 7 bins per decade, spline: 1
+      LambdaPrime table from 1 MeV to 10 TeV in 49 bins 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+       Klein-Nishina :  Emin=        0 eV    Emax=       10 TeV
+
+conv:   for  gamma    SubType= 14  BuildTable= 1
+      Lambda table from 1.022 MeV to 10 TeV, 20 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        BetheHeitler :  Emin=        0 eV    Emax=       80 GeV
+     BetheHeitlerLPM :  Emin=       80 GeV   Emax=       10 TeV
+
+msc:   for e-    SubType= 10
+      RangeFactor= 0.04, stepLimitType: 1, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=      100 MeV  Table with 42 bins Emin=    100 eV    Emax=    100 MeV
+        WentzelVIUni :  Emin=      100 MeV   Emax=       10 TeV  Table with 35 bins Emin=    100 MeV   Emax=     10 TeV
+
+eIoni:   for  e-    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha :  Emin=        0 eV    Emax=       10 TeV
+
+eBrem:   for  e-    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  HighEnergyThreshold(GeV)= 10000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB :  Emin=        0 eV    Emax=        1 GeV   DipBustGen
+            eBremLPM :  Emin=        1 GeV   Emax=       10 TeV   DipBustGen
+
+CoulombScat:   for  e-, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from 100 MeV to 10 TeV, 7 bins per decade, spline: 1
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=      100 MeV   Emax=       10 TeV
+
+msc:   for e+    SubType= 10
+      RangeFactor= 0.04, stepLimitType: 1, latDisplacement: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=      100 MeV  Table with 42 bins Emin=    100 eV    Emax=    100 MeV
+        WentzelVIUni :  Emin=      100 MeV   Emax=       10 TeV  Table with 35 bins Emin=    100 MeV   Emax=     10 TeV
+
+eIoni:   for  e+    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        MollerBhabha :  Emin=        0 eV    Emax=       10 TeV
+
+eBrem:   for  e+    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      LPM flag: 1 for E > 1 GeV,  HighEnergyThreshold(GeV)= 10000
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+             eBremSB :  Emin=        0 eV    Emax=        1 GeV   DipBustGen
+            eBremLPM :  Emin=        1 GeV   Emax=       10 TeV   DipBustGen
+
+annihil:   for  e+, integral: 1     SubType= 5  BuildTable= 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            eplus2gg :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  e+, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from 100 MeV to 10 TeV, 7 bins per decade, spline: 1
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=      100 MeV   Emax=       10 TeV
+
+msc:   for proton    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 0, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  proton    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=        2 MeV
+          BetheBloch :  Emin=        2 MeV   Emax=       10 TeV
+
+hBrems:   for  proton    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=       10 TeV
+
+hPairProd:   for  proton    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      Sampling table 13x1001; from 7.50618 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  proton, integral: 1     SubType= 1  BuildTable= 1
+      Used Lambda table of anti_proton
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for GenericIon    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV
+
+ionIoni:   for  GenericIon    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.01, dRoverRange= 0.1, integral: 1, fluct: 1, linLossLimit= 0.02
+      Stopping Power data for 17 ion/material pairs 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            BraggIon :  Emin=        0 eV    Emax=        2 MeV
+          BetheBloch :  Emin=        2 MeV   Emax=       10 TeV
+
+msc:   for alpha    SubType= 10
+      RangeFactor= 0.2, stepLimitType: 0, latDisplacement: 0
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            UrbanMsc :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+ionIoni:   for  alpha    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.01, dRoverRange= 0.1, integral: 1, fluct: 1, linLossLimit= 0.02
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            BraggIon :  Emin=        0 eV    Emax=   7.9452 MeV
+          BetheBloch :  Emin=   7.9452 MeV   Emax=       10 TeV
+
+msc:   for anti_proton    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 0, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  anti_proton    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=        2 MeV
+          BetheBloch :  Emin=        2 MeV   Emax=       10 TeV
+
+hBrems:   for  anti_proton    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=       10 TeV
+
+hPairProd:   for  anti_proton    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      Sampling table 13x1001; from 7.50618 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  anti_proton, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from threshold  to 10 TeV, 7 bins per decade, spline: 1
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for kaon+    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 0, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  kaon+    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=  1.05231 MeV
+          BetheBloch :  Emin=  1.05231 MeV   Emax=       10 TeV
+
+hBrems:   for  kaon+    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=       10 TeV
+
+hPairProd:   for  kaon+    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      Sampling table 14x1001; from 3.94942 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  kaon+, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from threshold  to 10 TeV, 7 bins per decade, spline: 1
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for kaon-    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 0, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  kaon-    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=  1.05231 MeV
+          BetheBloch :  Emin=  1.05231 MeV   Emax=       10 TeV
+
+hBrems:   for  kaon-    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=       10 TeV
+
+hPairProd:   for  kaon-    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      Sampling table 14x1001; from 3.94942 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  kaon-, integral: 1     SubType= 1  BuildTable= 1
+      Used Lambda table of kaon+
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for mu+    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 0, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+muIoni:   for  mu+    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=      200 keV
+          BetheBloch :  Emin=      200 keV   Emax=        1 GeV
+        MuBetheBloch :  Emin=        1 GeV   Emax=       10 TeV
+
+muBrems:   for  mu+    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem :  Emin=        0 eV    Emax=       10 TeV
+
+muPairProd:   for  mu+    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      Sampling table 17x1001; from 1 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  mu+, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from threshold  to 10 TeV, 7 bins per decade, spline: 1
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for mu-    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 0, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+muIoni:   for  mu-    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=      200 keV
+          BetheBloch :  Emin=      200 keV   Emax=        1 GeV
+        MuBetheBloch :  Emin=        1 GeV   Emax=       10 TeV
+
+muBrems:   for  mu-    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+              MuBrem :  Emin=        0 eV    Emax=       10 TeV
+
+muPairProd:   for  mu-    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      Sampling table 17x1001; from 1 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+          muPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  mu-, integral: 1     SubType= 1  BuildTable= 1
+      Used Lambda table of mu+
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=       10 TeV
+NeutronHP: /Capture file for Z = 6, A = 12 is not found and NeutronHP will use /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Capture/CrossSection/6_nat_Carbon
+NeutronHP: /Elastic file for Z = 6, A = 12 is not found and NeutronHP will use /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Elastic/CrossSection/6_nat_Carbon
+NeutronHP: /Inelastic file for Z = 6, A = 12 is not found and NeutronHP will use /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic/CrossSection/6_nat_Carbon
+NeutronHP: /Capture file for Z = 6, A = 13 is not found and NeutronHP will use /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Capture/CrossSection/6_nat_Carbon
+NeutronHP: /Elastic file for Z = 6, A = 13 is not found and NeutronHP will use /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Elastic/CrossSection/6_nat_Carbon
+NeutronHP: /Inelastic file for Z = 6, A = 13 is not found and NeutronHP will use /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic/CrossSection/6_nat_Carbon
+NeutronHP: /Capture file for Z = 8, A = 18 is not found and NeutronHP will use /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Capture/CrossSection/8_17_Oxygen
+NeutronHP: /Elastic file for Z = 8, A = 18 is not found and NeutronHP will use /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Elastic/CrossSection/8_17_Oxygen
+NeutronHP: /Inelastic file for Z = 8, A = 18 is not found and NeutronHP will use /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic/CrossSection/8_17_Oxygen
+NeutronHP: /Elastic file for Z = 6, A = 12 is not found and NeutronHP will use /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Elastic/CrossSection/6_nat_Carbon
+NeutronHP: /Elastic file for Z = 6, A = 13 is not found and NeutronHP will use /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Elastic/CrossSection/6_nat_Carbon
+NeutronHP: /Elastic file for Z = 8, A = 18 is not found and NeutronHP will use /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Elastic/CrossSection/8_17_Oxygen
+/homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+@@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+NeutronHP: /Capture file for Z = 6, A = 12 is not found and NeutronHP will use /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Capture/CrossSection/6_nat_Carbon
+NeutronHP: /Capture file for Z = 6, A = 13 is not found and NeutronHP will use /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Capture/CrossSection/6_nat_Carbon
+NeutronHP: /Capture file for Z = 8, A = 18 is not found and NeutronHP will use /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Capture/CrossSection/8_17_Oxygen
+
+msc:   for pi+    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 0, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  pi+    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               Bragg :  Emin=        0 eV    Emax=  297.505 keV
+          BetheBloch :  Emin=  297.505 keV   Emax=       10 TeV
+
+hBrems:   for  pi+    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=       10 TeV
+
+hPairProd:   for  pi+    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      Sampling table 16x1001; from 1.11656 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  pi+, integral: 1     SubType= 1  BuildTable= 1
+      Lambda table from threshold  to 10 TeV, 7 bins per decade, spline: 1
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=       10 TeV
+
+msc:   for pi-    SubType= 10
+      RangeFactor= 0.2, step limit type: 0, lateralDisplacement: 0, polarAngleLimit(deg)= 180
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+        WentzelVIUni :  Emin=        0 eV    Emax=       10 TeV  Table with 77 bins Emin=    100 eV    Emax=     10 TeV
+
+hIoni:   for  pi-    SubType= 2
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      finalRange(mm)= 0.1, dRoverRange= 0.2, integral: 1, fluct: 1, linLossLimit= 0.01
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+            ICRU73QO :  Emin=        0 eV    Emax=  297.505 keV
+          BetheBloch :  Emin=  297.505 keV   Emax=       10 TeV
+
+hBrems:   for  pi-    SubType= 3
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+               hBrem :  Emin=        0 eV    Emax=       10 TeV
+
+hPairProd:   for  pi-    SubType= 4
+      dE/dx and range tables from 100 eV  to 10 TeV in 77 bins
+      Lambda tables from threshold to 10 TeV, 7 bins per decade, spline: 1
+      Sampling table 16x1001; from 1.11656 GeV to 10 TeV 
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+           hPairProd :  Emin=        0 eV    Emax=       10 TeV
+
+CoulombScat:   for  pi-, integral: 1     SubType= 1  BuildTable= 1
+      Used Lambda table of pi+
+      180 < Theta(degree) < 180; pLimit(GeV^1)= 0.139531
+      ===== EM models for the G4Region  DefaultRegionForTheWorld ======
+  eCoulombScattering :  Emin=        0 eV    Emax=       10 TeV
+
+====================================================================
+                  HADRONIC PROCESSES SUMMARY (verbose level 1)
+
+---------------------------------------------------
+                           Hadronic Processes for GenericIon
+
+  Process: ionInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 4 GeV/n
+        Model:                      FTFP: 2 GeV/n ---> 100 TeV/n
+     Cr_sctns: Glauber-Gribov nucleus nucleus: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for He3
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns: Glauber-Gribov nucleus nucleus: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: He3Inelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 4 GeV/n
+        Model:                      FTFP: 2 GeV/n ---> 100 TeV/n
+     Cr_sctns: Glauber-Gribov nucleus nucleus: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for alpha
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: alphaInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 4 GeV/n
+        Model:                      FTFP: 2 GeV/n ---> 100 TeV/n
+     Cr_sctns: Glauber-Gribov nucleus nucleus: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for anti_He3
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: anti_He3Inelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_alpha
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: anti_alphaInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_deuteron
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: anti_deuteronInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_neutron
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: anti_neutronInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for anti_proton
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100.1 MeV
+        Model:              AntiAElastic: 100 MeV ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: anti_protonInelastic
+        Model:                      FTFP: 0 eV  ---> 100 TeV
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for anti_triton
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100.1 MeV/n
+        Model:              AntiAElastic: 100 MeV/n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: anti_tritonInelastic
+        Model:                      FTFP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:              AntiAGlauber: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+  Process: hFritiofCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for deuteron
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: dInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 4 GeV/n
+        Model:                      FTFP: 2 GeV/n ---> 100 TeV/n
+     Cr_sctns: Glauber-Gribov nucleus nucleus: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for e+
+
+  Process: positronNuclear
+        Model:   G4ElectroVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:          ElectroNuclearXS: 0 eV  ---> 100 TeV
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for e-
+
+  Process: electronNuclear
+        Model:   G4ElectroVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:          ElectroNuclearXS: 0 eV  ---> 100 TeV
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for gamma
+
+  Process: photonNuclear
+        Model:            BertiniCascade: 0 eV  ---> 3.5 GeV
+        Model:           TheoFSGenerator: 3 GeV ---> 100 TeV
+     Cr_sctns:            PhotoNuclearXS: 0 eV  ---> 100 TeV
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for kaon+
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: kaon+Inelastic
+        Model:                      QGSP: 12 GeV ---> 100 TeV
+        Model:                      FTFP: 9.5 GeV ---> 25 GeV
+        Model:            BertiniCascade: 0 eV  ---> 9.9 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:  ChipsKaonPlusInelasticXS: 0 eV  ---> 100 TeV
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for kaon-
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: kaon-Inelastic
+        Model:                      QGSP: 12 GeV ---> 100 TeV
+        Model:                      FTFP: 9.5 GeV ---> 25 GeV
+        Model:            BertiniCascade: 0 eV  ---> 9.9 GeV
+     Cr_sctns:            Glauber-Gribov: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns: ChipsKaonMinusInelasticXS: 0 eV  ---> 100 TeV
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+  Process: hBertiniCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for lambda
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 100 TeV
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: lambdaInelastic
+        Model:            BertiniCascade: 0 eV  ---> 6 GeV
+        Model:                      FTFP: 2 GeV ---> 100 TeV
+     Cr_sctns:   ChipsHyperonInelasticXS: 0 eV  ---> 100 TeV
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for mu+
+
+  Process: muonNuclear
+        Model:      G4MuonVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:     KokoulinMuonNuclearXS: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for mu-
+
+  Process: muonNuclear
+        Model:      G4MuonVDNuclearModel: 0 eV  ---> 1 PeV
+     Cr_sctns:     KokoulinMuonNuclearXS: 0 eV  ---> 100 TeV
+
+  Process: muMinusCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for neutron
+
+  Process: hadElastic
+        Model:             hElasticCHIPS: 19.5 MeV ---> 100 TeV
+        Model:          NeutronHPElastic: 0 eV  ---> 20 MeV
+     Cr_sctns:        NeutronHPElasticXS: 0 eV  ---> 20 MeV
+     Cr_sctns:        G4NeutronElasticXS: 0 eV  ---> 100 TeV
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: neutronInelastic
+        Model:                      QGSP: 12 GeV ---> 100 TeV
+        Model:                      FTFP: 9.5 GeV ---> 25 GeV
+        Model:            BertiniCascade: 19.9 MeV ---> 9.9 GeV
+        Model:        NeutronHPInelastic: 0 eV  ---> 20 MeV
+     Cr_sctns:      NeutronHPInelasticXS: 0 eV  ---> 20 MeV
+     Cr_sctns:       Barashenkov-Glauber: 0 eV  ---> 100 TeV
+     Cr_sctns:       Barashenkov-Glauber: 0 eV  ---> 100 TeV
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+  Process: nCapture
+        Model:          NeutronHPCapture: 0 eV  ---> 20 MeV
+        Model:               nRadCapture: 19.9 MeV ---> 100 TeV
+     Cr_sctns:        NeutronHPCaptureXS: 0 eV  ---> 20 MeV
+     Cr_sctns:        G4NeutronCaptureXS: 0 eV  ---> 100 TeV
+     Cr_sctns:        NeutronHPCaptureXS: 0 eV  ---> 20 MeV
+     Cr_sctns:          GheishaCaptureXS: 0 eV  ---> 100 TeV
+
+  Process: nFission
+        Model:          NeutronHPFission: 0 eV  ---> 20 MeV
+        Model:                G4LFission: 19.9 MeV ---> 2.88022e+295 J  
+     Cr_sctns:        NeutronHPFissionXS: 0 eV  ---> 20 MeV
+     Cr_sctns:          GheishaFissionXS: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for pi+
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 1.0001 GeV
+        Model:           hElasticGlauber: 1 GeV ---> 100 TeV
+     Cr_sctns:       Barashenkov-Glauber: 0 eV  ---> 100 TeV
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: pi+Inelastic
+        Model:                      QGSP: 12 GeV ---> 100 TeV
+        Model:                      FTFP: 9.5 GeV ---> 25 GeV
+        Model:            BertiniCascade: 0 eV  ---> 9.9 GeV
+     Cr_sctns:      G4CrossSectionPairGG: 0 eV  ---> 100 TeV
+                         G4CrossSectionPairGG: G4PiNuclearCrossSection cross sections 
+                           below 91 GeV, Glauber-Gribov above 
+     Cr_sctns:      G4CrossSectionPairGG: 0 eV  ---> 100 TeV
+                         G4CrossSectionPairGG: G4PiNuclearCrossSection cross sections 
+                           below 91 GeV, Glauber-Gribov above 
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for pi-
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV  ---> 1.0001 GeV
+        Model:           hElasticGlauber: 1 GeV ---> 100 TeV
+     Cr_sctns:       Barashenkov-Glauber: 0 eV  ---> 100 TeV
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: pi-Inelastic
+        Model:                      QGSP: 12 GeV ---> 100 TeV
+        Model:                      FTFP: 9.5 GeV ---> 25 GeV
+        Model:            BertiniCascade: 0 eV  ---> 9.9 GeV
+     Cr_sctns:      G4CrossSectionPairGG: 0 eV  ---> 100 TeV
+                         G4CrossSectionPairGG: G4PiNuclearCrossSection cross sections 
+                           below 91 GeV, Glauber-Gribov above 
+     Cr_sctns:      G4CrossSectionPairGG: 0 eV  ---> 100 TeV
+                         G4CrossSectionPairGG: G4PiNuclearCrossSection cross sections 
+                           below 91 GeV, Glauber-Gribov above 
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+  Process: hBertiniCaptureAtRest
+
+---------------------------------------------------
+                           Hadronic Processes for proton
+
+  Process: hadElastic
+        Model:             hElasticCHIPS: 0 eV  ---> 100 TeV
+     Cr_sctns:      ChipsProtonElasticXS: 0 eV  ---> 100 TeV
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: protonInelastic
+        Model:                      QGSP: 12 GeV ---> 100 TeV
+        Model:                      FTFP: 9.5 GeV ---> 25 GeV
+        Model:            BertiniCascade: 0 eV  ---> 9.9 GeV
+     Cr_sctns:       Barashenkov-Glauber: 0 eV  ---> 100 TeV
+     Cr_sctns:       Barashenkov-Glauber: 0 eV  ---> 100 TeV
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+---------------------------------------------------
+                           Hadronic Processes for triton
+
+  Process: hadElastic
+        Model:              hElasticLHEP: 0 eV /n ---> 100 TeV/n
+     Cr_sctns:            GheishaElastic: 0 eV  ---> 100 TeV
+
+  Process: tInelastic
+        Model:  Binary Light Ion Cascade: 0 eV /n ---> 4 GeV/n
+        Model:                      FTFP: 2 GeV/n ---> 100 TeV/n
+     Cr_sctns: Glauber-Gribov nucleus nucleus: 0 eV  ---> 2.88022e+295 J  
+     Cr_sctns:          GheishaInelastic: 0 eV  ---> 100 TeV
+
+================================================================
+G4WT0 > 
+G4WT0 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT0 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT0 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT0 > 
+G4WT1 > 
+G4WT1 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT1 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT1 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT1 > 
+G4WT4 > 
+G4WT4 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT4 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT4 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT4 > 
+G4WT3 > 
+G4WT3 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT3 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT3 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT3 > 
+G4WT0 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT0 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT0 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT0 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT0 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT0 > New sensitive detector <ZnSAg> is registered at /
+G4WT1 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT1 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT1 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT1 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT1 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT1 > New sensitive detector <ZnSAg> is registered at /
+G4WT4 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT4 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT4 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT4 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT4 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT4 > New sensitive detector <ZnSAg> is registered at /
+G4WT2 > 
+G4WT2 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT2 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT2 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT2 > 
+G4WT3 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT3 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT3 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT3 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT3 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT3 > New sensitive detector <ZnSAg> is registered at /
+G4WT5 > 
+G4WT5 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT5 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT5 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT5 > 
+G4WT6 > 
+G4WT6 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT6 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT6 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT6 > 
+G4WT7 > 
+G4WT7 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT7 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT7 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT7 > 
+G4WT5 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT5 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT5 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT5 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT5 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT5 > New sensitive detector <ZnSAg> is registered at /
+G4WT7 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT7 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT7 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT7 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT7 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT7 > New sensitive detector <ZnSAg> is registered at /
+G4WT6 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT6 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT6 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT6 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT6 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT6 > New sensitive detector <ZnSAg> is registered at /
+G4WT2 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT2 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT2 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT2 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT2 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT2 > New sensitive detector <ZnSAg> is registered at /
+G4WT9 > 
+G4WT9 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT9 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT9 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT9 > 
+G4WT13 > 
+G4WT13 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT13 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT13 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT13 > 
+G4WT10 > 
+G4WT10 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT10 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT10 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT10 > 
+G4WT13 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT13 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT13 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT13 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT13 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT13 > New sensitive detector <ZnSAg> is registered at /
+G4WT8 > 
+G4WT8 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT8 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT8 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT8 > 
+G4WT9 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT9 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT9 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT9 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT9 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT9 > New sensitive detector <ZnSAg> is registered at /
+G4WT10 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT10 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT10 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT10 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT10 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT10 > New sensitive detector <ZnSAg> is registered at /
+G4WT11 > 
+G4WT11 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT11 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT11 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT11 > 
+G4WT8 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT8 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT8 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT8 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT8 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT8 > New sensitive detector <ZnSAg> is registered at /
+G4WT0 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT0 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT0 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT14 > 
+G4WT14 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT14 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT14 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT14 > 
+G4WT11 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT11 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT11 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT11 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT11 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT11 > New sensitive detector <ZnSAg> is registered at /
+G4WT15 > 
+G4WT15 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT15 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT15 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT15 > 
+G4WT18 > 
+G4WT18 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT18 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT18 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT18 > 
+G4WT14 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT14 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT14 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT14 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT14 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT14 > New sensitive detector <ZnSAg> is registered at /
+G4WT15 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT15 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT15 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT15 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT15 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT15 > New sensitive detector <ZnSAg> is registered at /
+G4WT19 > 
+G4WT19 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT19 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT19 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT19 > 
+G4WT18 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT18 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT18 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT18 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT18 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT18 > New sensitive detector <ZnSAg> is registered at /
+G4WT19 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT19 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT19 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT19 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT19 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT19 > New sensitive detector <ZnSAg> is registered at /
+G4WT23 > 
+G4WT23 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT23 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT23 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT23 > 
+G4WT17 > 
+G4WT17 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT17 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT17 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT17 > 
+G4WT20 > 
+G4WT20 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT20 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT20 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT20 > 
+G4WT23 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT23 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT23 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT23 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT23 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT23 > New sensitive detector <ZnSAg> is registered at /
+G4WT22 > 
+G4WT22 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT22 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT22 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT22 > 
+G4WT17 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT17 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT17 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT17 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT17 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT17 > New sensitive detector <ZnSAg> is registered at /
+G4WT25 > 
+G4WT25 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT25 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT25 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT25 > 
+G4WT20 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT20 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT20 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT20 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT20 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT20 > New sensitive detector <ZnSAg> is registered at /
+G4WT1 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT1 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT1 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT22 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT22 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT22 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT22 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT22 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT22 > New sensitive detector <ZnSAg> is registered at /
+G4WT16 > 
+G4WT16 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT16 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT16 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT16 > 
+G4WT25 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT25 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT25 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT25 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT25 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT25 > New sensitive detector <ZnSAg> is registered at /
+G4WT16 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT16 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT16 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT16 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT16 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT16 > New sensitive detector <ZnSAg> is registered at /
+G4WT12 > 
+G4WT12 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT12 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT12 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT12 > 
+G4WT31 > 
+G4WT31 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT31 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT31 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT31 > 
+G4WT12 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT12 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT12 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT12 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT12 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT12 > New sensitive detector <ZnSAg> is registered at /
+G4WT29 > 
+G4WT29 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT29 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT29 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT29 > 
+G4WT31 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT31 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT31 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT31 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT31 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT31 > New sensitive detector <ZnSAg> is registered at /
+G4WT28 > 
+G4WT28 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT28 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT28 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT28 > 
+G4WT29 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT29 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT29 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT29 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT29 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT29 > New sensitive detector <ZnSAg> is registered at /
+G4WT26 > 
+G4WT26 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT26 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT26 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT26 > 
+G4WT28 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT28 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT28 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT28 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT28 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT28 > New sensitive detector <ZnSAg> is registered at /
+G4WT30 > 
+G4WT30 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT30 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT30 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT30 > 
+G4WT24 > 
+G4WT24 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT24 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT24 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT24 > 
+G4WT26 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT26 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT26 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT26 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT26 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT26 > New sensitive detector <ZnSAg> is registered at /
+G4WT30 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT30 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT30 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT30 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT30 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT30 > New sensitive detector <ZnSAg> is registered at /
+G4WT24 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT24 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT24 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT24 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT24 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT24 > New sensitive detector <ZnSAg> is registered at /
+G4WT4 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT4 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT4 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT27 > 
+G4WT27 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT27 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT27 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT27 > 
+G4WT21 > 
+G4WT21 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT21 >  Local thread RunManagerKernel version Name: geant4-10-02-patch-02 [MT]
+G4WT21 > ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+G4WT21 > 
+G4WT27 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT27 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT27 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT27 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT27 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT27 > New sensitive detector <ZnSAg> is registered at /
+G4WT21 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepProton> is registered at 1
+G4WT21 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepAlpha> is registered at 2
+G4WT21 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepIon> is registered at 3
+G4WT21 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepElec> is registered at 4
+G4WT21 > G4SDManager::AddNewCollection : the collection <ZnSAg/edepTotal> is registered at 5
+G4WT21 > New sensitive detector <ZnSAg> is registered at /
+G4WT3 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT3 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT3 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT5 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT5 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT5 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT7 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT7 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT7 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT6 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT6 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT6 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT2 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT2 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT2 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT9 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT9 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT9 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT10 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT10 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT10 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT13 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT13 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT13 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT8 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT8 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT8 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT11 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT11 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT11 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT14 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT14 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT14 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT15 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT15 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT15 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT18 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT18 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT18 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT19 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT19 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT19 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT23 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT23 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT23 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT17 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT17 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT17 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT20 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT20 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT20 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT22 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT22 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT22 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT25 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT25 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT25 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT16 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT16 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT16 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT12 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT12 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT12 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT31 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT31 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT31 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT28 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT28 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT28 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT29 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT29 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT29 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT26 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT26 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT26 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT30 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT30 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT30 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT24 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT24 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT24 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT27 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT27 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT27 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT21 > /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT21 > @@@ G4ParticleHPInelastic instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5/Inelastic
+G4WT21 > @@@ G4ParticleHPInelasticData instantiated for particle neutron data directory variable is G4NEUTRONHPDATA pointing to /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/share/Geant4-10.2.2/data/G4NDL4.5
+G4WT28 > 
+G4WT28 > --------------------End of Local Run------------------------
+Mean number of op = 3.62828
+G4WT28 > rms = 17.1422
+G4WT28 > ... merge Csv all H1 :  - done
+G4WT28 > ... write Csv files :  - done
+G4WT4 > 
+G4WT4 > --------------------End of Local Run------------------------
+Mean number of op = 3.67436
+G4WT4 > rms = 19.6812
+G4WT4 > ... merge Csv all H1 :  - done
+G4WT4 > ... write Csv files :  - done
+G4WT31 > 
+G4WT31 > --------------------End of Local Run------------------------
+Mean number of op = 3.70018
+G4WT31 > rms = 18.0369
+G4WT31 > ... merge Csv all H1 :  - done
+G4WT31 > ... write Csv files :  - done
+G4WT14 > 
+G4WT14 > --------------------End of Local Run------------------------
+Mean number of op = 3.79026
+G4WT14 > rms = 19.0553
+G4WT14 > ... merge Csv all H1 :  - done
+G4WT14 > ... write Csv files :  - done
+G4WT16 > 
+G4WT16 > --------------------End of Local Run------------------------
+Mean number of op = 3.8291
+G4WT16 > rms = 21.0581
+G4WT16 > ... merge Csv all H1 :  - done
+G4WT16 > ... write Csv files :  - done
+G4WT7 > 
+G4WT7 > --------------------End of Local Run------------------------
+Mean number of op = 3.7706
+G4WT7 > rms = 19.5764
+G4WT7 > ... merge Csv all H1 :  - done
+G4WT7 > ... write Csv files :  - done
+G4WT9 > 
+G4WT9 > --------------------End of Local Run------------------------
+Mean number of op = 3.65808
+G4WT9 > rms = 16.4962
+G4WT9 > ... merge Csv all H1 :  - done
+G4WT9 > ... write Csv files :  - done
+G4WT2 > 
+G4WT2 > --------------------End of Local Run------------------------
+Mean number of op = 3.47653
+G4WT2 > rms = 15.718
+G4WT2 > ... merge Csv all H1 :  - done
+G4WT2 > ... write Csv files :  - done
+G4WT30 > 
+G4WT30 > --------------------End of Local Run------------------------
+Mean number of op = 3.80877
+G4WT30 > rms = 17.2353
+G4WT30 > ... merge Csv all H1 :  - done
+G4WT30 > ... write Csv files :  - done
+G4WT20 > 
+G4WT20 > --------------------End of Local Run------------------------
+Mean number of op = 3.71003
+G4WT20 > rms = 18.7107
+G4WT20 > ... merge Csv all H1 :  - done
+G4WT20 > ... write Csv files :  - done
+G4WT12 > 
+G4WT12 > --------------------End of Local Run------------------------
+Mean number of op = 3.67741
+G4WT12 > rms = 15.9651
+G4WT12 > ... merge Csv all H1 :  - done
+G4WT12 > ... write Csv files :  - done
+G4WT13 > 
+G4WT13 > --------------------End of Local Run------------------------
+Mean number of op = 3.58509
+G4WT13 > rms = 16.1706
+G4WT13 > ... merge Csv all H1 :  - done
+G4WT13 > ... write Csv files :  - done
+G4WT15 > 
+G4WT15 > --------------------End of Local Run------------------------
+Mean number of op = 3.65267
+G4WT15 > rms = 17.0125
+G4WT15 > ... merge Csv all H1 :  - done
+G4WT15 > ... write Csv files :  - done
+G4WT21 > 
+G4WT21 > --------------------End of Local Run------------------------
+Mean number of op = 3.56685
+G4WT21 > rms = 20.3136
+G4WT21 > ... merge Csv all H1 :  - done
+G4WT21 > ... write Csv files :  - done
+G4WT22 > 
+G4WT22 > --------------------End of Local Run------------------------
+Mean number of op = 3.652
+G4WT22 > rms = 19.5316
+G4WT22 > ... merge Csv all H1 :  - done
+G4WT22 > ... write Csv files :  - done
+G4WT27 > 
+G4WT27 > --------------------End of Local Run------------------------
+Mean number of op = 3.6582
+G4WT27 > rms = 21.7883
+G4WT27 > ... merge Csv all H1 :  - done
+G4WT27 > ... write Csv files :  - done
+G4WT26 > 
+G4WT26 > --------------------End of Local Run------------------------
+Mean number of op = 3.79179
+G4WT26 > rms = 17.1684
+G4WT26 > ... merge Csv all H1 :  - done
+G4WT26 > ... write Csv files :  - done
+G4WT17 > 
+G4WT17 > --------------------End of Local Run------------------------
+Mean number of op = 3.75568
+G4WT17 > rms = 17.7098
+G4WT17 > ... merge Csv all H1 :  - done
+G4WT17 > ... write Csv files :  - done
+G4WT25 > 
+G4WT25 > --------------------End of Local Run------------------------
+Mean number of op = 3.6392
+G4WT25 > rms = 13.4813
+G4WT25 > ... merge Csv all H1 :  - done
+G4WT25 > ... write Csv files :  - done
+G4WT23 > 
+G4WT23 > --------------------End of Local Run------------------------
+Mean number of op = 3.52767
+G4WT23 > rms = 15.3526
+G4WT23 > ... merge Csv all H1 :  - done
+G4WT23 > ... write Csv files :  - done
+G4WT8 > 
+G4WT8 > --------------------End of Local Run------------------------
+Mean number of op = 3.5886
+G4WT8 > rms = 16.3657
+G4WT8 > ... merge Csv all H1 :  - done
+G4WT8 > ... write Csv files :  - done
+G4WT0 > 
+G4WT0 > --------------------End of Local Run------------------------
+Mean number of op = 3.72489
+G4WT0 > rms = 17.8598
+G4WT0 > ... merge Csv all H1 :  - done
+G4WT0 > ... write Csv files :  - done
+G4WT6 > 
+G4WT6 > --------------------End of Local Run------------------------
+Mean number of op = 3.72792
+G4WT6 > rms = 18.4978
+G4WT6 > ... merge Csv all H1 :  - done
+G4WT6 > ... write Csv files :  - done
+G4WT11 > 
+G4WT11 > --------------------End of Local Run------------------------
+Mean number of op = 3.68926
+G4WT11 > rms = 16.7689
+G4WT11 > ... merge Csv all H1 :  - done
+G4WT11 > ... write Csv files :  - done
+G4WT24 > 
+G4WT24 > --------------------End of Local Run------------------------
+Mean number of op = 3.68837
+G4WT24 > rms = 17.3018
+G4WT24 > ... merge Csv all H1 :  - done
+G4WT24 > ... write Csv files :  - done
+G4WT10 > 
+G4WT10 > --------------------End of Local Run------------------------
+Mean number of op = 3.66294
+G4WT10 > rms = 17.3535
+G4WT10 > ... merge Csv all H1 :  - done
+G4WT10 > ... write Csv files :  - done
+G4WT29 > 
+G4WT29 > --------------------End of Local Run------------------------
+Mean number of op = 3.7111
+G4WT29 > rms = 20.2983
+G4WT29 > ... merge Csv all H1 :  - done
+G4WT29 > ... write Csv files :  - done
+G4WT3 > 
+G4WT3 > --------------------End of Local Run------------------------
+Mean number of op = 3.52171
+G4WT3 > rms = 16.7815
+G4WT3 > ... merge Csv all H1 :  - done
+G4WT3 > ... write Csv files :  - done
+G4WT19 > 
+G4WT19 > --------------------End of Local Run------------------------
+Mean number of op = 3.79148
+G4WT19 > rms = 19.4762
+G4WT19 > ... merge Csv all H1 :  - done
+G4WT19 > ... write Csv files :  - done
+G4WT5 > 
+G4WT5 > --------------------End of Local Run------------------------
+Mean number of op = 3.41426
+G4WT5 > rms = 16.5948
+G4WT5 > ... merge Csv all H1 :  - done
+G4WT5 > ... write Csv files :  - done
+G4WT1 > 
+G4WT1 > --------------------End of Local Run------------------------
+Mean number of op = 3.41012
+G4WT1 > rms = 15.4271
+G4WT1 > ... merge Csv all H1 :  - done
+G4WT1 > ... write Csv files :  - done
+G4WT18 > 
+G4WT18 > --------------------End of Local Run------------------------
+Mean number of op = 3.45557
+G4WT18 > rms = 16.3945
+G4WT18 > ... merge Csv all H1 :  - done
+G4WT18 > ... write Csv files :  - done
+
+--------------------End of Global Run-----------------------
+Mean number of optical photon = 3.67041
+rms = 17.9954
+Ave. total deposited energy in ZnS(Ag), relative error = 0.000922197 MeV,  0.00547909
+Ave. proton deposited energy in ZnS(Ag), relative error = 0 MeV, 1
+ave. alpha deposited energy in ZnS(Ag), relative error = 0 Mev, 1
+ave. ion deposited energy in ZnS(Ag), relative error = 0 Mev, 1
+ave. elec deposited energy in ZnS(Ag), relative error = 0.000833212 Mev, 0.00551212
+... write Csv file : _h1_0.csv - done
+... write Csv file : _h1_1.csv - done
+... write Csv file : _h1_2.csv - done
+... write Csv file : _h1_3.csv - done
+... write Csv file : _h1_4.csv - done
+... write Csv file : _h1_5.csv - done
+... write Csv file : _h1_6.csv - done
+... write Csv file : _h1_7.csv - done
+... write Csv file : _h1_8.csv - done
+... write Csv file : _h1_9.csv - done
+... write Csv file : _h1_10.csv - done
+... write Csv file : _h1_11.csv - done
+... write Csv file : _h1_12.csv - done
+... write Csv file : _h1_13.csv - done
+... write Csv file : _h1_14.csv - done
+... write Csv file : _h1_15.csv - done
+... write Csv file : _h1_16.csv - done
+... write Csv file : _h1_17.csv - done
+... write Csv file : _h1_18.csv - done
+... write Csv file : _h1_19.csv - done
+... write Csv file : _h1_20.csv - done
+... write Csv file : _h1_21.csv - done
+... write Csv file : _h1_22.csv - done
+... write Csv file : _h1_23.csv - done
+... write Csv file : _h1_24.csv - done
+... write Csv file : _h1_25.csv - done
+... write Csv file : _h1_26.csv - done
+... write Csv file : _h1_27.csv - done
+... write Csv file : _h1_28.csv - done
+... write Csv file : _h1_29.csv - done
+... write Csv file : _h1_30.csv - done
+... write Csv file : _h1_31.csv - done
+... write Csv file : _h1_32.csv - done
+... write Csv file : _h1_33.csv - done
+... write Csv file : _h1_34.csv - done
+... write Csv file : _h1_35.csv - done
+... write Csv file : _h1_36.csv - done
+... write Csv file : _h1_37.csv - done
+... write Csv file : _h1_38.csv - done
+... write Csv file : _h1_39.csv - done
+... write Csv file : _h1_40.csv - done
+... write Csv file : _h1_41.csv - done
+... write Csv file : _h1_42.csv - done
+... write Csv file : _h1_43.csv - done
+... write Csv file : _h1_44.csv - done
+... write Csv file : _h1_45.csv - done
+... write Csv file : _h1_46.csv - done
+... write Csv file : _h1_47.csv - done
+... write Csv file : _h1_48.csv - done
+... write Csv file : _h1_49.csv - done
+... write Csv file : _h1_50.csv - done
+... write Csv file : _h1_51.csv - done
+... write Csv file : _h1_52.csv - done
+... write Csv file : _h1_53.csv - done
+... write Csv file : _h1_54.csv - done
+... write Csv file : _h1_55.csv - done
+... write Csv file : _h1_56.csv - done
+... write Csv file : _h1_57.csv - done
+... write Csv file : _h1_58.csv - done
+... write Csv file : _h1_59.csv - done
+... write Csv file : _h1_60.csv - done
+... write Csv file : _h1_61.csv - done
+... write Csv file : _h1_62.csv - done
+... write Csv file : _h1_63.csv - done
+... write Csv file : _h1_64.csv - done
+... write Csv file : _h1_65.csv - done
+... write Csv file : _h1_66.csv - done
+... write Csv file : _h1_67.csv - done
+... write Csv file : _h1_68.csv - done
+... write Csv file : _h1_69.csv - done
+... write Csv file : _h1_70.csv - done
+... write Csv file : _h1_71.csv - done
+... write Csv file : _h1_72.csv - done
+... write Csv file : _h1_73.csv - done
+... write Csv file : _h1_74.csv - done
+... write Csv file : _h1_75.csv - done
+... write Csv file : _h1_76.csv - done
+... write Csv file : _h1_77.csv - done
+... write Csv file : _h1_78.csv - done
+... write Csv file : _h1_79.csv - done
+... write Csv file : _h1_80.csv - done
+... write Csv file : _h1_81.csv - done
+... write Csv file : _h1_82.csv - done
+... write Csv file : _h1_83.csv - done
+... write Csv file : _h1_84.csv - done
+... write Csv file : _h1_85.csv - done
+... write Csv file : _h1_86.csv - done
+... write Csv file : _h1_87.csv - done
+... write Csv file : _h1_88.csv - done
+... write Csv file : _h1_89.csv - done
+... write Csv file : _h1_90.csv - done
+... write Csv file : _h1_91.csv - done
+... write Csv file : _h1_92.csv - done
+... write Csv file : _h1_93.csv - done
+... write Csv file : _h1_94.csv - done
+... write Csv file : _h1_95.csv - done
+... write Csv file : _h1_96.csv - done
+... write Csv file : _h1_97.csv - done
+... write Csv file : _h1_98.csv - done
+... write Csv file : _h1_99.csv - done
+... write Csv file : _h1_100.csv - done
+... write Csv file : _h1_101.csv - done
+... write Csv file : _h1_102.csv - done
+... write Csv file : _h1_103.csv - done
+... write Csv file : _h1_104.csv - done
+... write Csv file : _h1_105.csv - done
+... write Csv file : _h1_106.csv - done
+... write Csv file : _h1_107.csv - done
+... write Csv file : _h1_108.csv - done
+... write Csv file : _h1_109.csv - done
+... write Csv file : _h1_110.csv - done
+... write Csv file : _h1_111.csv - done
+... write Csv file : _h1_112.csv - done
+... write Csv file : _h1_113.csv - done
+... write Csv file : _h1_114.csv - done
+... write Csv file : _h1_115.csv - done
+... write Csv file : _h1_116.csv - done
+... write Csv file : _h1_117.csv - done
+... write Csv file : _h1_118.csv - done
+... write Csv file : _h1_119.csv - done
+... write Csv file : _h1_120.csv - done
+... write Csv file : _h1_121.csv - done
+... write Csv file : _h1_122.csv - done
+... write Csv file : _h1_123.csv - done
+... write Csv file : _h1_124.csv - done
+... write Csv file : _h1_125.csv - done
+... write Csv file : _h1_126.csv - done
+... write Csv file : _h1_127.csv - done
+... write Csv file : _h1_128.csv - done
+... write Csv file : _h1_129.csv - done
+... write Csv file : _h1_130.csv - done
+... write Csv file : _h1_131.csv - done
+... write Csv file : _h1_132.csv - done
+... write Csv file : _h1_133.csv - done
+... write Csv file : _h1_134.csv - done
+... write Csv file : _h1_135.csv - done
+... write Csv file : _h1_136.csv - done
+... write Csv file : _h1_137.csv - done
+... write Csv file : _h1_138.csv - done
+... write Csv file : _h1_139.csv - done
+... write Csv file : _h1_140.csv - done
+... write Csv file : _h1_141.csv - done
+... write Csv file : _h1_142.csv - done
+... write Csv file : _h1_143.csv - done
+... write Csv file : _h1_144.csv - done
+... write Csv file : _h1_145.csv - done
+... write Csv file : _h1_146.csv - done
+... write Csv file : _h1_147.csv - done
+... write Csv file : _h1_148.csv - done
+... write Csv file : _h1_149.csv - done
+... write Csv file : _h1_150.csv - done
+... write Csv file : _h1_151.csv - done
+... write Csv file : _h1_152.csv - done
+... write Csv file : _h1_153.csv - done
+... write Csv file : _h1_154.csv - done
+... write Csv file : _h1_155.csv - done
+... write Csv file : _h1_156.csv - done
+... write Csv file : _h1_157.csv - done
+... write Csv file : _h1_158.csv - done
+... write Csv file : _h1_159.csv - done
+... write Csv file : _h1_160.csv - done
+... write Csv file : _h1_161.csv - done
+... write Csv file : _h1_162.csv - done
+... write Csv file : _h1_163.csv - done
+... write Csv file : _h1_164.csv - done
+... write Csv file : _h1_165.csv - done
+... write Csv file : _h1_166.csv - done
+... write Csv file : _h1_167.csv - done
+... write Csv file : _h1_168.csv - done
+... write Csv file : _h1_169.csv - done
+... write Csv file : _h1_170.csv - done
+... write Csv file : _h1_171.csv - done
+... write Csv file : _h1_172.csv - done
+... write Csv file : _h1_173.csv - done
+... write Csv file : _h1_174.csv - done
+... write Csv file : _h1_175.csv - done
+... write Csv file : _h1_176.csv - done
+... write Csv file : _h1_177.csv - done
+... write Csv file : _h1_178.csv - done
+... write Csv file : _h1_179.csv - done
+... write Csv file : _h1_180.csv - done
+... write Csv file : _h1_181.csv - done
+... write Csv file : _h1_182.csv - done
+... write Csv file : _h1_183.csv - done
+... write Csv file : _h1_184.csv - done
+... write Csv file : _h1_185.csv - done
+... write Csv file : _h1_186.csv - done
+... write Csv file : _h1_187.csv - done
+... write Csv file : _h1_188.csv - done
+... write Csv file : _h1_189.csv - done
+... write Csv file : _h1_190.csv - done
+... write Csv file : _h1_191.csv - done
+... write Csv file : _h1_192.csv - done
+... write Csv file : _h1_193.csv - done
+... write Csv file : _h1_194.csv - done
+... write Csv file : _h1_195.csv - done
+... write Csv file : _h1_196.csv - done
+... write Csv file : _h1_197.csv - done
+... write Csv file : _h1_198.csv - done
+... write Csv file : _h1_199.csv - done
+... write Csv file : _h1_200.csv - done
+... write Csv file : _h1_201.csv - done
+... write Csv file : _h1_202.csv - done
+... write Csv file : _h1_203.csv - done
+... write Csv file : _h1_204.csv - done
+... write Csv file : _h1_205.csv - done
+... write Csv file : _h1_206.csv - done
+... write Csv file : _h1_207.csv - done
+... write Csv file : _h1_208.csv - done
+... write Csv file : _h1_209.csv - done
+... write Csv file : _h1_210.csv - done
+... write Csv file : _h1_211.csv - done
+... write Csv file : _h1_212.csv - done
+... write Csv file : _h1_213.csv - done
+... write Csv file : _h1_214.csv - done
+... write Csv file : _h1_215.csv - done
+... write Csv file : _h1_216.csv - done
+... write Csv file : _h1_217.csv - done
+... write Csv file : _h1_218.csv - done
+... write Csv file : _h1_219.csv - done
+... write Csv file : _h1_220.csv - done
+... write Csv file : _h1_221.csv - done
+... write Csv file : _h1_222.csv - done
+... write Csv file : _h1_223.csv - done
+... write Csv file : _h1_224.csv - done
+... write Csv file : _h1_225.csv - done
+... write Csv file : _h1_226.csv - done
+... write Csv file : _h1_227.csv - done
+... write Csv file : _h1_228.csv - done
+... write Csv file : _h1_229.csv - done
+... write Csv file : _h1_230.csv - done
+... write Csv file : _h1_231.csv - done
+... write Csv file : _h1_232.csv - done
+... write Csv file : _h1_233.csv - done
+... write Csv file : _h1_234.csv - done
+... write Csv file : _h1_235.csv - done
+... write Csv file : _h1_236.csv - done
+... write Csv file : _h1_237.csv - done
+... write Csv file : _h1_238.csv - done
+... write Csv file : _h1_239.csv - done
+... write Csv file : _h1_240.csv - done
+... write Csv file : _h1_241.csv - done
+... write Csv file : _h1_242.csv - done
+... write Csv file : _h1_243.csv - done
+... write Csv file : _h1_244.csv - done
+... write Csv file : _h1_245.csv - done
+... write Csv file : _h1_246.csv - done
+... write Csv file : _h1_247.csv - done
+... write Csv file : _h1_248.csv - done
+... write Csv file : _h1_249.csv - done
+... write Csv file : _h1_250.csv - done
+... write Csv file : _h1_251.csv - done
+... write Csv file : _h1_252.csv - done
+... write Csv file : _h1_253.csv - done
+... write Csv file : _h1_254.csv - done
+... write Csv file : _h1_255.csv - done
+... write Csv file : _h1_256.csv - done
+... write Csv file : _h1_257.csv - done
+... write Csv file : _h1_258.csv - done
+... write Csv file : _h1_259.csv - done
+... write Csv file : _h1_260.csv - done
+... write Csv file : _h1_261.csv - done
+... write Csv file : _h1_262.csv - done
+... write Csv file : _h1_263.csv - done
+... write Csv file : _h1_264.csv - done
+... write Csv file : _h1_265.csv - done
+... write Csv file : _h1_266.csv - done
+... write Csv file : _h1_267.csv - done
+... write Csv file : _h1_268.csv - done
+... write Csv file : _h1_269.csv - done
+... write Csv file : _h1_270.csv - done
+... write Csv file : _h1_271.csv - done
+... write Csv file : _h1_272.csv - done
+... write Csv file : _h1_273.csv - done
+... write Csv file : _h1_274.csv - done
+... write Csv file : _h1_275.csv - done
+... write Csv file : _h1_end.csv - done
+... write Csv files :  - done
+WARNING: G4VisManager::IsValidView(): Attempt to draw when no graphics system
+  has been instantiated.  Use "/vis/open" or "/vis/sceneHandler/create".
+  Alternatively, to avoid this message, suppress instantiation of vis
+  manager (G4VisExecutive), possibly by setting G4VIS_NONE, and ensure
+  drawing code is executed only if G4VVisManager::GetConcreteInstance()
+  is non-zero.
+Graphics systems deleted.
+Visualization Manager deleting...

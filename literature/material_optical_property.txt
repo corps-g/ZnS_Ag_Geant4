@@ -1,0 +1,208 @@
+Each optical process reads different material optical properties from the 
+material property table. To have a complete reference list of the optical
+properties for each optical process, in a process cc source file, e.g., 
+"G4Scintillation.cc", search 
+   "GetConstProperty" -> constant optical property
+   "GetProperty"      -> OP-energy-dependent optical property
+   
+The reference list is followed.
+
+
+
+
+#-------------------------------------------------------------------------------
+OpAbsorption
+
+Property (G4MaterialPropertyVector)
+	ABSLENGTH
+
+#-------------------------------------------------------------------------------
+OpRayleigh
+
+Property (G4PhysicsOrderedFreeVector, same as G4MaterialPropertyVector)
+	RAYLEIGH
+	RINDEX
+
+ConstProperty (double)
+	ISOTHERMAL_COMPRESSIBILITY
+	RS_SCALE_FACTOR
+
+#-------------------------------------------------------------------------------
+MieHG
+
+Property (G4MaterialPropertyVector)
+	MIEHG
+	
+ConstProperty (double)
+	MIEHG_FORWARD
+	MIEHG_BACKWARD
+	MIEHG_FORWARD_RATIO
+
+#-------------------------------------------------------------------------------
+
+
+#-------------------------------------------------------------------------------
+Scintillation
+
+Property (G4MaterialPropertyVector)
+	FASTCOMPONENT
+	SLOWCOMPONENT
+	ScintillationYield
+		PROTONSCINTILLATIONYIELD
+		DEUTERONSCINTILLATIONYIELD
+		TRITONSCINTILLATIONYIELD
+		ALPHASCINTILLATIONYIELD
+		IONSCINTILLATIONYIELD
+		ELECTRONSCINTILLATIONYIELD (default)
+
+
+ConstProperty (double)
+	SCINTILLATIONYIELD
+	RESOLUTIONSCALE
+	FASTTIMECONSTANT
+	FASTSCINTILLATIONRISETIME
+	SLOWTIMECONSTANT
+	SLOWSCINTILLATIONRISETIME
+	YIELDRATIO
+
+
+
+#-------------------------------------------------------------------------------
+WLS
+
+Property (G4MaterialPropertyVector)
+	WLSCOMPONENT
+	WLSABSLENGTH
+	
+
+ConstProperty (double)
+	WLSMEANNUMBERPHOTONS
+	WLSTIMECONSTANT
+	
+
+
+#-------------------------------------------------------------------------------
+BoundaryProcess
+
+Property (G4MaterialPropertyVector)
+	RINDEX
+	REFLECTIVITY
+	REALRINDEX
+	IMAGINARYRINDEX
+	EFFICIENCY
+	TRANSMITTANCE
+	SPECULARLOBECONSTANT
+	SPECULARSPIKECONSTANT
+	BACKSCATTERCONSTANT
+	GROUPVEL
+
+ConstProperty (double)
+	SURFACEROUGHNESS
+	
+#-------------------------------------------------------------------------------
+Cerenkov
+
+Property (G4MaterialPropertyVector)
+	RINDEX
+
+#-------------------------------------------------------------------------------
+Surface property
+
+Constructor
+
+G4OpticalSurface(const G4String& name,
+			 G4OpticalSurfaceModel model = glisur,
+			 G4OpticalSurfaceFinish finish = polished,
+			 G4SurfaceType type = dielectric_dielectric,
+			 G4double value = 1.0);
+
+Enums
+
+enum G4OpticalSurfaceFinish
+{
+   polished,                    // smooth perfectly polished surface
+   polishedfrontpainted,        // smooth top-layer (front) paint
+   polishedbackpainted,         // same is 'polished' but with a back-paint
+
+   ground,                      // rough surface
+   groundfrontpainted,          // rough top-layer (front) paint
+   groundbackpainted,           // same as 'ground' but with a back-paint
+
+   polishedlumirrorair,         // mechanically polished surface, with lumirror
+   polishedlumirrorglue,        // mechanically polished surface, with lumirror & meltmount
+   polishedair,                 // mechanically polished surface
+   polishedteflonair,           // mechanically polished surface, with teflon
+   polishedtioair,              // mechanically polished surface, with tio paint
+   polishedtyvekair,            // mechanically polished surface, with tyvek
+   polishedvm2000air,           // mechanically polished surface, with esr film
+   polishedvm2000glue,          // mechanically polished surface, with esr film & meltmount
+
+   etchedlumirrorair,           // chemically etched surface, with lumirror
+   etchedlumirrorglue,          // chemically etched surface, with lumirror & meltmount
+   etchedair,                   // chemically etched surface
+   etchedteflonair,             // chemically etched surface, with teflon
+   etchedtioair,                // chemically etched surface, with tio paint
+   etchedtyvekair,              // chemically etched surface, with tyvek
+   etchedvm2000air,             // chemically etched surface, with esr film
+   etchedvm2000glue,            // chemically etched surface, with esr film & meltmount
+
+   groundlumirrorair,           // rough-cut surface, with lumirror
+   groundlumirrorglue,          // rough-cut surface, with lumirror & meltmount
+   groundair,                   // rough-cut surface
+   groundteflonair,             // rough-cut surface, with teflon
+   groundtioair,                // rough-cut surface, with tio paint
+   groundtyvekair,              // rough-cut surface, with tyvek
+   groundvm2000air,             // rough-cut surface, with esr film
+   groundvm2000glue             // rough-cut surface, with esr film & meltmount
+};
+
+enum G4OpticalSurfaceModel
+{
+   glisur,                      // original GEANT3 model
+   unified,                     // UNIFIED model
+   LUT,                         // Look-Up-Table model
+   dichroic                     // dichroic filter
+};
+
+enum G4SurfaceType
+{
+   dielectric_metal,            // dielectric-metal interface
+   dielectric_dielectric,       // dielectric-dielectric interface
+   dielectric_LUT,              // dielectric-Look-Up-Table interface
+   dielectric_dichroic,         // dichroic filter interface
+   firsov,                      // for Firsov Process
+   x_ray                        // for x-ray mirror process
+};
+
+enum G4OpBoundaryProcessStatus {  Undefined,
+                                  Transmission, FresnelRefraction,
+                                  FresnelReflection, TotalInternalReflection,
+                                  LambertianReflection, LobeReflection,
+                                  SpikeReflection, BackScattering,
+                                  Absorption, Detection, NotAtBoundary,
+                                  SameMaterial, StepTooSmall, NoRINDEX,
+                                  PolishedLumirrorAirReflection,
+                                  PolishedLumirrorGlueReflection,
+                                  PolishedAirReflection,
+                                  PolishedTeflonAirReflection,
+                                  PolishedTiOAirReflection,
+                                  PolishedTyvekAirReflection,
+                                  PolishedVM2000AirReflection,
+                                  PolishedVM2000GlueReflection,
+                                  EtchedLumirrorAirReflection,
+                                  EtchedLumirrorGlueReflection,
+                                  EtchedAirReflection,
+                                  EtchedTeflonAirReflection,
+                                  EtchedTiOAirReflection,
+                                  EtchedTyvekAirReflection,
+                                  EtchedVM2000AirReflection,
+                                  EtchedVM2000GlueReflection,
+                                  GroundLumirrorAirReflection,
+                                  GroundLumirrorGlueReflection,
+                                  GroundAirReflection,
+                                  GroundTeflonAirReflection,
+                                  GroundTiOAirReflection,
+                                  GroundTyvekAirReflection,
+                                  GroundVM2000AirReflection,
+                                  GroundVM2000GlueReflection,
+                                  Dichroic };

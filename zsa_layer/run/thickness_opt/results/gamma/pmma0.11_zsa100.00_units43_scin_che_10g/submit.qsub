@@ -1,0 +1,72 @@
+#!/bin/bash
+
+## Specify the amount fo RAM needed _per_core_. Default is 1G
+#$ -l mem=4G
+
+## Specify the maximum runtime.  Default is 1 hour (1:00:00)
+#$ -l h_rt=60:00:00
+
+## Copy environment
+#$ -V
+
+## Choose powerful nodes
+##$ -q batch.q@@elves
+##$ -q batch.q@@heroes
+
+## Specify the J.R.'s queue to run
+##$ -q batch.q@@mne-jaroberts
+
+## Require the use of infiniband.
+##$ -l ib=TRUE
+
+## Allow variable core assignment
+#$ -binding linear
+
+## Parallel environment.
+##$ -pe single 1
+#$ -pe single 4
+##$ -pe mpi-20 20
+##Line 20 min machine, Line 21 max machine
+##$ -pe mpi-fill "75-100"
+##$ -pe mpi-spread "80-200"
+
+## Use the current working directory instead of your home directory
+#$ -cwd
+
+## Send email upon (b)eginning, (e)nd, (a)bort
+#$ -M kevin.fuwenkai@gmail.com -m e
+
+## Name my job, to make it easier to find in the queue
+##$ -N name
+
+## Submit an Array job with environment variable $SGE_TASK_ID
+## Line sets variable with min:max:step
+##$ -t 1-16
+##$ -t 85:186
+##$ -t 103:118
+##$ -t 136-152
+##$ -t 170-186
+##$ -t 187-198
+##$ -t 191
+##$ -t 1-186
+
+## Merge output and error text treams into a single stream
+#$ -j y
+#$ -o z_$JOB_NAME.$JOB_ID.$TASK_ID.log
+
+source /usr/bin/virtualenvwrapper.sh
+workon pythonEnv
+
+# mpirun example
+PYTHON_BINARY=$(which python)
+# mpirun -np 2 ${PYTHON_BINARY} test.py
+
+## Need to source geant4 xs data here. bashrc file do not work.
+. /homes/wenkaifu/opt/geant4/geant4.10.02.p02-install/bin/geant4.sh
+
+# mcnp
+export PATH=/homes/jaroberts/opt/nuclear/MCNP/MCNP_CODE/bin:$PATH
+export DATAPATH=/homes/jaroberts/opt/nuclear/MCNP/MCNP_DATA/
+
+
+/homes/wenkaifu/geant4/iso/build/exampleB1 run.mac 0.105361 100.000000 43 > out.txt

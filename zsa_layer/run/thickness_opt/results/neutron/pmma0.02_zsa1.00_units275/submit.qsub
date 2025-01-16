@@ -1,0 +1,87 @@
+# Sample PBS job script
+# 
+# Submit job with qsub thisScript.sh
+# 
+# Line start with # is comment. Start with #PBS is directive.
+#
+# Inherit all environment variables
+#PBS -V 
+
+### Run in the queue named "batch"
+#   #PBS -q batch
+
+### Use the bourne shell
+#PBS -S /bin/sh
+
+### Remove only the three initial "#" characters before #PBS
+### in the following lines to enable:
+###
+### To send email when the job is completed:
+#PBS -m ae
+##PBS -M kevin.fuwenkai@gmail.com
+
+### Specify the number of cpus for your job.  This example will allocate 4 cores
+### using 2 processors on each of 2 nodes.
+#PBS -l nodes=1:ppn=3
+
+# #PBS -l nodes=8 -l procs=200
+# #PBS -l procs=200
+
+### Tell PBS how much memory you expect to use PER core. 
+#   Use units of 'b','kb', 'mb' or 'gb'.
+# #PBS -l mem=1gb
+
+### Tell PBS the anticipated run-time for your job, where walltime=HH:MM:SS
+#PBS -l walltime=60:00:00
+
+### Switch to the working directory; by default TORQUE launches processes
+### from your home directory.
+cd $PBS_O_WORKDIR
+
+### Optionally set the destination for your program's output
+### Specify localhost and an NFS filesystem to prevent file copy errors.
+#PBS -e ./myjob.err
+#PBS -o ./myjob.log
+
+# Calculate the number of processors allocated to this run.
+# NPROCS=`wc -l $PBS_NODEFILE`
+# echo $NPROCS
+# Calculate the number of nodes allocated.
+# NNODES=`uniq -u $PBS_NODEFILE | wc -l`
+# echo $NNODES
+# cp $PBS_NODEFILE ./nodefile.txt
+
+### Set the job name
+# #PBS -N myjob
+
+### mpirun example, NEED to specify pathes of mpirun and python2.7
+# /opt/openmpi/bin/mpirun -np 100 /opt/python/bin/python2.7 mpi.py
+
+# Instead of direct using python, use /opt/python/bin/python2.7, examples are 
+# /opt/python/bin/python2.7 --version
+# /opt/python/bin/python2.7 script.py
+
+# PBS environment variables available in every batch job:
+#
+# $PBS_ENVIRONMENT set to PBS_BATCH to indicate that the job is a batch job; otherwise,
+#                  set to PBS_INTERACTIVE to indicate that the job is a PBS interactive job
+# $PBS_JOBID       the job identifier assigned to the job by the batch system
+# $PBS_JOBNAME     the job name supplied by the user
+# $PBS_NODEFILE    the name of the file that contains the list of nodes assigned to the job
+# $PBS_QUEUE       the name of the queue from which the job is executed
+# $PBS_O_HOME      value of the HOME variable in the environment in which qsub was executed
+# $PBS_O_LANG      value of the LANG variable in the environment in which qsub was executed
+# $PBS_O_LOGNAME   value of the LOGNAME variable in the environment in which qsub was executed
+# $PBS_O_PATH      value of the PATH variable in the environment in which qsub was executed
+# $PBS_O_MAIL      value of the MAIL variable in the environment in which qsub was executed
+# $PBS_O_SHELL     value of the SHELL variable in the environment in which qsub was executed
+# $PBS_O_TZ        value of the TZ variable in the environment in which qsub was executed
+# $PBS_O_HOST      the name of the host upon which the qsub command is running
+# $PBS_O_QUEUE     the name of the original queue to which the job was submitted
+# $PBS_O_WORKDIR   the absolute path of the current working directory of the qsub command
+#
+# End of example PBS script
+
+
+#PBS -N r0.02_1.00_275
+/home/wenkaifu/geant4/layer_const_length/build/exampleB1 run.mac 0.018016 1.000000 275 > out.txt

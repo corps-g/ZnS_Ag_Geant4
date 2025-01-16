@@ -1,0 +1,130 @@
+# Macro file for the initialization of example B1
+# in interactive session
+#
+# Set some default verbose
+/control/verbose 2
+/control/saveHistory
+/run/verbose 2
+#
+# Change the default number of threads (in multi-threaded mode)
+#/run/numberOfThreads 4
+#
+# Initialize kernel
+/run/initialize
+
+# Use these open statements to open selected visualization
+#
+# Use this open statement to create an OpenGL view:
+/vis/open OGL
+#
+# Use this open statement to create an OpenInventor view:
+#/vis/open OI
+#
+# Use this open statement to create a .prim file suitable for
+# viewing in DAWN:
+#/vis/open DAWNFILE
+#
+# Use this open statement to create a .heprep file suitable for
+# viewing in HepRApp:
+#/vis/open HepRepFile
+#
+# Use this open statement to create a .wrl file suitable for
+# viewing in a VRML viewer:
+#/vis/open VRML2FILE
+#
+# Disable auto refresh and quieten vis messages whilst scene and
+# trajectories are established:
+/vis/viewer/set/autoRefresh true
+/vis/verbose errors
+#
+# Draw geometry:
+/vis/drawVolume
+
+/vis/geometry/set/visibility World 0 0
+/vis/geometry/set/visibility scinLV 0 0
+/vis/geometry/set/visibility pmmaLV1 0 0
+/vis/geometry/set/visibility pmmaLV2 0 0
+/vis/geometry/set/visibility pmtLV 0 0
+/vis/geometry/set/visibility srcLV 0 0
+/vis/geometry/set/colour ZnS(AG)LV 0 1 0 0
+/vis/viewer/set/style s
+
+# gamma source position sampling
+# -----------------------------------------------------------------------------
+/gps/particle gamma
+
+# gamma position sampling
+/gps/pos/type Plane
+/gps/pos/shape Rectangle
+/gps/pos/centre 0 0 -1.270001000 cm
+/gps/pos/halfx 1.905000000 cm
+/gps/pos/halfy 1.905000000 cm
+# half isotropic gamma
+/gps/ang/type iso
+/gps/ang/maxtheta 90 deg
+
+/gps/pos/confine srcPV
+
+# source particle visualization
+/vis/scene/add/trajectories
+/vis/scene/endOfEventAction accumulate 1000
+
+
+# ------------------------------------------------------------------------------
+# Useful commands
+
+# geometry visibility
+# /vis/geometry/set/visibility logical_volume_name depth visibility
+
+# geometry color
+# /vis/geometry/set/colour lv_name depth red green blue (opacity)
+
+# list all logical volumes
+# /vis/geometry/list
+
+# view angle
+# /vis/viewer/set/viewpointThetaPhi 70 20
+# /vis/viewer/set/viewpointVector [x] [y] [z]
+
+# set upVector
+# /vis/viewer/set/upVector [x] [y] [z]
+
+# drawing style
+# /vis/viewer/set/style w or s
+# w: wireframe
+# s: surface
+
+# pan to specific coordinate
+# /vis/viewer/panTo [right] [up] [unit]
+# /vis/viewer/pan [right] [up] [unit]
+
+# zoom 
+# /vis/viewer/zoomTo 4.
+# /vis/viewer/zoom [multiplier]
+
+# save figure
+/vis/ogl/set/printMode pixmap
+/vis/ogl/set/printSize -1 -1
+
+# printEPS has to be first
+# /vis/ogl/printEPS 
+# /vis/ogl/export name
+
+# Eps file can be converted to pdf by Linux command
+# epstopdf input.eps
+
+# add axes to draw
+# /vis/scene/add/axes [x0] [y0] [z0] [length] [unit] [colour-string] [showtext]
+# Draws axes at (x0, y0, z0) of given length and colour
+# If "colour-string" is "auto", x, y and z will be red, green and blue 
+# respectively. Otherwise it can be one of the pre-defined text-specified 
+# colours - see information printed by the vis manager at start-up or use "/vis/list".
+# If "length" is negative, it is set to about 25% of scene extent.
+# If "showtext" is false, annotations are suppressed.
+
+# To delete the axes, just run /vis/drawVolume again
+
+# set background color
+# /vis/viewer/set/background/ [red_or_string] [green] [blue] [opacity]
+
+# Use ! to skip parameter setting?
